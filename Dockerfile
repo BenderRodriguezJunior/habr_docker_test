@@ -11,6 +11,13 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 4. Копируем весь остальной код приложения
 COPY . .
 
+# 4a. Создаем пользователя appuser
+ 
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+
+# Переключаемся на этого пользователя
+USER appuser
+
 # 5. "Сообщаем" Docker, что наше приложение будет работать на порту 5000
 EXPOSE 5000
 
