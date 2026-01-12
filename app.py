@@ -4,7 +4,7 @@ from flask import Flask
 app = Flask(__name__)
 
 # Определяем маршрут для главной страницы
-@app.route('/qq')
+@app.route('/')
 def hello_world():
     # Эта строка — то, что мы увидим в браузере
     return 'Привет, Habr, из Docker-контейнера!'
