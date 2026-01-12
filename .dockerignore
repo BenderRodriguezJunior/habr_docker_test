@@ -2,6 +2,7 @@
 .venv
 venv
 env
+habrvenv
 
 # Исключаем кэш Python
 __pycache__/
